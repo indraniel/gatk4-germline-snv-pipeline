@@ -92,6 +92,10 @@ java -Xmx3500M \
 * The reference fasta file was [human build 38][7]
 * reference bands will be broken up at genomic positions that are multiples of 1000000
 
+## Generating Alignments &amp; GVCFs
+
+The [FastqToBQSRCramAndVCFWithoutGenotype][11] workflow is used to produce the input GVCFs for the joint variant calling pipeline.  This pipeline is run by the internal WUSTL MGI informatics group on the MGI local cluster and is based on a single sample.  After this pipeline runs, the corresponding the CRAMs and GVCFs produced are transferred to the cloud for further processing and sharing.
+
 [0]: https://www.wustl.edu
 [1]: https://www.genome.gov/Funded-Programs-Projects/NHGRI-Genome-Sequencing-Program/Centers-for-Common-Disease-Genomics
 [2]: https://github.com/hall-lab
@@ -103,3 +107,4 @@ java -Xmx3500M \
 [8]: https://github.com/broadinstitute/gatk-docs/blob/master/gatk3-tooldocs/3.6-0/org_broadinstitute_gatk_tools_walkers_haplotypecaller_HaplotypeCaller.json#L584
 [9]: https://github.com/ldgauthier
 [10]: https://github.com/eitanbanks
+[11]: https://github.com/indraniel/gatk4-germline-snv-pipeline/blob/master/FastqToBQSRCramAndVCFWithoutGenotype/work_flow.wdl
