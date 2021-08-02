@@ -96,6 +96,10 @@ java -Xmx3500M \
 
 The [FastqToBQSRCramAndVCFWithoutGenotype][11] workflow is used to produce the input GVCFs for the joint variant calling pipeline.  This pipeline is run by the internal WUSTL MGI informatics group on the MGI local cluster and is based on a single sample.  After this pipeline runs, the corresponding the CRAMs and GVCFs produced are transferred to the cloud for further processing and sharing.
 
+# Reblocking Notes
+
+[ReblockGVCF-CCDG-F3.wdl][12] was used by the Broad to Reblock the WUSTL produced CCDG GVCFs for the Freeze 3 joint variant call set.
+
 [0]: https://www.wustl.edu
 [1]: https://www.genome.gov/Funded-Programs-Projects/NHGRI-Genome-Sequencing-Program/Centers-for-Common-Disease-Genomics
 [2]: https://github.com/hall-lab
@@ -108,3 +112,4 @@ The [FastqToBQSRCramAndVCFWithoutGenotype][11] workflow is used to produce the i
 [9]: https://github.com/ldgauthier
 [10]: https://github.com/eitanbanks
 [11]: https://github.com/indraniel/gatk4-germline-snv-pipeline/blob/master/FastqToBQSRCramAndVCFWithoutGenotype/work_flow.wdl
+[12]: https://github.com/indraniel/gatk4-germline-snv-pipeline/blob/master/ReblockGVCF-CCDG-F3.wdl
